@@ -1,0 +1,54 @@
+.featured-section {
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 50px 0 20px;
+}
+
+.featured-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.carousel-btn {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.featured-list {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.featured-card {
+  min-width: 180px;
+  text-align: center;
+}
+
+.featured-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.featured-name {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.featured-price {
+  font-weight: bold;
+  font-size: 14px;
+}

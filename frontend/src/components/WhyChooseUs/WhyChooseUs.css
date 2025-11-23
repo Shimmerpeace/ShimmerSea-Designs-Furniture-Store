@@ -1,0 +1,124 @@
+/* -------------------------------------- */
+/* THEME VARIABLES */
+/* -------------------------------------- */
+/**/
+.why-container.light {
+  --bg: #ffffff;
+  --text: ;
+  --muted: ;
+  --card-bg: ;
+  --card-border: ;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --yellow: #f7c53b;
+  --yellow-soft: ;
+}
+
+.why-container.dark {
+  --bg: #0f0f0f;
+  --text: #f0f0f0;
+  --muted: #bbbbbb;
+  --card-bg: #1b1b1b;
+  --card-border: #333;
+  --shadow: ;
+  --yellow: #ffdf6b;
+  --yellow-soft: #5a470b;
+}
+
+/* -------------------------------------- */
+/* MAIN CONTAINER */
+/* -------------------------------------- */
+
+.why-container {
+  width: 100%;
+  padding: 60px 80px;
+  background: #ffffff;;
+  color: #222;
+  transition: 0.25s ease;
+}
+
+
+/* -------------------------------------- */
+/* HEADER */
+/* -------------------------------------- */
+
+.why-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.why-header p {
+  max-width: 600px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.why-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 25px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.06);
+  transition: 0.25s ease;
+}
+
+.why-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffdf6b;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.why-number.large {
+  font-size: 40px;
+}
+
+.why-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.why-icon {
+  margin-top: 15px;
+  width: 40px;
+  height: 40px;
+  background: #ffe9a7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------- */
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

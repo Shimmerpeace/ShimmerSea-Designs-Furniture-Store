@@ -1,0 +1,175 @@
+.home {
+  width: 100%;
+  font-family: sans-serif;
+  color: #070f1d;
+}
+
+.top-section {
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(
+      rgba(255, 250, 250, 0.1),
+      rgba(3, 3, 3, 0.9)
+    ),
+    url("../../assets/image1.jpeg");
+}
+
+.top-margin-wrapper {
+  padding: 70px;
+}
+
+.top-margin-wrapper h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.top-margin-wrapper .highlight {
+  color: #facc15;
+}
+
+.top-margin-wrapper p {
+  margin-top: 1rem;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.top-section-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.primary-btn {
+  background: #facc15;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottom-section {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bottom-margin-wrapper {
+  padding: 0 70px 70px 70px;
+}
+
+.yellow-banner {
+  background: #f7c80f;
+  padding: 0.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yellow-banner p {
+  font-weight: 600;
+}
+
+.quote-btn {
+  border: 1px solid black;
+  padding: 0.25rem 1rem;
+  font-weight: 500;
+  background: none;
+  cursor: pointer;
+}
+
+.produce {
+  padding: 0;
+  margin: 0;
+}
+
+.produce-text {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+margin-bottom: 20px;
+padding-top: 10px;
+}
+
+.produce-text h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #eee5e5;
+}
+
+.produce-text hr {
+  border: 0;
+  height: 1px;
+  margin: 20px 100px 20px 0 ;
+background-color: #f7c80f;
+}
+
+.produce-text p {
+  max-width: 600px;
+  color: rgb(158, 156, 156);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #ffffff;
+  
+}
+
+.card-image {
+  height: 140px;
+  background-color: #d1d5db;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.bedroom {
+  background-image: url("../../assets/bedroom.jpeg");
+}
+
+.kitchen {
+  background-image: url("../../assets/kitchen.jpeg");
+}
+
+.livingRoom {
+  background-image: url("../../assets/livingRoom.jpeg");
+}
+
+.office {
+  background-image: url("../../assets/office.jpeg");
+}
