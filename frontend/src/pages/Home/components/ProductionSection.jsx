@@ -40,7 +40,6 @@ Get a Quote
 </button>
 </div>
 
-text
   <div className="production-header">
     <div>
       <h2>What We Produce</h2>
