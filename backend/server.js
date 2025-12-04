@@ -20,3 +20,13 @@ app.use("/api/home", homeRoutes);
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+/**
+ *const mongoose = require("mongoose");
+
+mongoose
+  .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/furniture-shop")
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("Mongo error", err));
+
+ */

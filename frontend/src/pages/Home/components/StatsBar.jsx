@@ -1,26 +1,38 @@
-import statsBg from "../../../assets/image1.jpeg";
+import { useEffect, useState } from "react";
 
 function StatsBar() {
-const stats = [
-{ id: 1, label: "Items Sold", value: "74,353" },
-{ id: 2, label: "Happy Customers", value: "6,333" },
-{ id: 3, label: "Years Experience", value: "20+" },
-{ id: 4, label: "Partners", value: "20+" },
-];
+  const [stats, setStats] = useState([]);
 
-return (
-<section className="stats-bar" role="region" aria-label="Company statistics" >
-<img src={statsBg} alt="" className="stats-bg" aria-hidden="true" loading="lazy" />
-<div className="stats-grid">
-{stats.map((stat) => (
-<div key={stat.id} className="stat">
-<strong>{stat.value}</strong>
-<span>{stat.label}</span>
-</div>
-))}
-</div>
-</section>
-);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/home/stats")
+      .then((res) => res.json())
+      .then(setStats)
+      .catch((err) => console.error("Failed to load stats", err));
+  }, []);
+
+  return (
+    <section
+      className="stats-bar"
+      role="region"
+      aria-label="Company statistics"
+    >
+      <img
+        src="/images/image1.jpeg"
+        alt=""
+        className="stats-bg"
+        aria-hidden="true"
+        loading="lazy"
+      />
+      <div className="stats-grid">
+        {stats.map((stat) => (
+          <div key={stat.id} className="stat">
+            <strong>{stat.value}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default StatsBar;
