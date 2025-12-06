@@ -1,21 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AuthModal from "../AuthSignInAndSignUp/AuthModal";
 import "./Header.css";
 
-export default function NavBar() {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
-  function handleLinkClick() {
-    setMenuOpen(false);
-  }
+  useEffect(() => {
+    const token = localStorage.getItem("userToken");
+    setIsAuthenticated(!!token);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userToken");
+    setIsAuthenticated(false);
+  };
+
+  const handleModalClose = () => {
+    setShowAuthModal(false);
+  };
 
   return (
     <header>
       <div className="top-bar">
         <span>Berlin • +49 123 456 7890</span>
         <div className="top-buttons">
-          <button>Login</button>
-          <button>Sign Up</button>
+          <button>Browse</button>
+          {isAuthenticated ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <button onClick={() => setShowAuthModal(true)}>Login</button>
+          )}
         </div>
       </div>
 
@@ -42,40 +59,39 @@ export default function NavBar() {
           className={`nav-links ${menuOpen ? " active" : ""}`}
         >
           <li>
-            <Link to="/" onClick={handleLinkClick}>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/products" onClick={handleLinkClick}>
+            <Link to="/products" onClick={() => setMenuOpen(false)}>
               Products
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={handleLinkClick}>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
               About Us
             </Link>
           </li>
           <li>
-            <Link to="/trending" onClick={handleLinkClick}>
+            <Link to="/trending" onClick={() => setMenuOpen(false)}>
               Trending
             </Link>
           </li>
           <li>
-            <Link to="/deals" onClick={handleLinkClick}>
+            <Link to="/deals" onClick={() => setMenuOpen(false)}>
               Deals
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={handleLinkClick}>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
               Contact Us
             </Link>
           </li>
         </ul>
-        <div className="nav-actions">
-          <button className="sign-in">Sign In</button>
-        </div>
       </nav>
+
+      <AuthModal isOpen={showAuthModal} onClose={handleModalClose} />
     </header>
   );
 }
